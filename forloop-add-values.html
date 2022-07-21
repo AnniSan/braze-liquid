@@ -1,0 +1,5 @@
+{% assign total = 0 %}
+
+{% for item in items %}
+{% capture total %}{{ total | plus: item[1] }}{% endcapture %}
+{% endfor %}

@@ -1,0 +1,10 @@
+{% assign array = "true,false,true" | split: "," %}
+{% assign count = 0 %}
+
+{% for item in array %}
+    {% if item == "true" %}
+        {% assign count = count | plus: 1 %}
+    {% endif %}
+{% endfor %}
+
+There are {{ count }} true values

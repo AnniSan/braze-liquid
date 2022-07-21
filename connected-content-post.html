@@ -1,0 +1,10 @@
+{% connected_content
+     https://example.com/
+     :method post
+     :headers {
+       "X-Api-Token": "ABC123XYZ"
+ 	}
+     :body external_id={${{external_id}}}&campaign={{${campaign_id}}}&abandon_topic={{${abandon_topic}}}
+     :content_type application/json
+     :save payload
+%}
